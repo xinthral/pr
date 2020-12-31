@@ -6,6 +6,7 @@ I frequently use */
 namespace constants {
     // Loop Iterator
     constexpr int sentinal { 20 };
+    constexpr int metallicRatio { 1 };
 }
 #endif
 
