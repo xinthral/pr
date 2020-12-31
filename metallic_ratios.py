@@ -18,7 +18,7 @@ def ratioGenerator(index, nRatio, debug=0):
     '''
     a, b = 0, 1
     for i in range(0, index+1):
-        yield(a) if (debug == 0) else yeild((i,a))
+        yield(a if (debug == 0) else (i,a))
         a, b = b, (nRatio * b + a)
 
 if __name__ == '__main__':
