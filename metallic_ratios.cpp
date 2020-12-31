@@ -9,7 +9,7 @@ std::function<int()> generator = [] {
     i = 0; a = 0; b = 1; c = 0;
     return [=]() mutable {
         if (i < constants::sentinal) {
-            c=a; a=b; b=b+c; i++;
+            c=a; a=b; b=(constants::metallicRatio*b)+c; i++;
             return c;       // Yes I start with {0, 1}
         } else { return -1; }
     };
