@@ -19,8 +19,7 @@ def beadsort(input_list):
     # its value in transposed_list will be <= 0.
     for _ in input_list:
         # Counting values > 0 is how we tell how many beads are in the
-        # current 'bottommost row'. Note that Python's bools can be
-        # evaluated as integers; True == 1 and False == 0.
+        # current 'bottommost row'. 
         return_list.append(sum(n > 0 for n in transposed_list))
         # Remove the 'bottommost row' by subtracting 1 from each element.
         transposed_list = [n - 1 for n in transposed_list]
