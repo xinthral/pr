@@ -4,9 +4,9 @@ returns an iterative generator, utilize the next() method to progress
 the iteration
 
 Ratios:
-\t- 1 :: Golden Ratio (aka Fibonacci Sequence)
-\t- 2 :: Silver Ratio (aka Pell Sequence)
-\t- 3 :: Bronze Ratio (aka 3-bonacci Sequence)
+- 1 :: Golden Ratio (aka Fibonacci Sequence)
+- 2 :: Silver Ratio (aka Pell Sequence)
+- 3 :: Bronze Ratio (aka 3-bonacci Sequence)
 """
 
 def ratioGenerator(index, nRatio, debug=0):
@@ -14,7 +14,7 @@ def ratioGenerator(index, nRatio, debug=0):
     Returns a python generator object that iterates
     from 0 -> N, adjusting by the input ratio.
     index  := The number of elements in the sequence
-    nRatio := Numerical Ratio which chooses increment of each step
+    nRatio := Numerical Ratio (listed above)
     '''
     a, b = 0, 1
     for i in range(0, index+1):
