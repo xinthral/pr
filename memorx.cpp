@@ -8,10 +8,8 @@ using namespace std;
 
 /*	Xinthral
 	April 13, 2018
-	Purpose: MemorX is a Memory game clone
-	ToDo:  What ideas have I had that I haven't written in yet?
-		- Comment Code Better
-		- Tranfser class methods down to definitions section
+	Purpose: MemorX is a Memory game clone for the console
+    and works best between 2x2 and 20x20 (fullscreen console)
 */
 
 class Player {
