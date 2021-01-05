@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Week 3 Program, Cipher manipulation
+ * Cipher manipulation
  * Purpose: Generate a cipher based on a key utilizing shifting techniques
  * and prints to console the cipher matrix
  * @Author: Xinthral
