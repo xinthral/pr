@@ -44,11 +44,7 @@ public class WordCipher {
             System.arraycopy(letters, startIndex, shiftedChars,0, letters.length - startIndex);
             System.arraycopy(letters, 0, shiftedChars, (letters.length - startIndex), letters.length - (letters.length - startIndex));
             outputMatrix[i] = shiftedChars;
-            if (startIndex < 26) {
-                startIndex++;
-            } else {
-                startIndex = 0;
-            }
+            (startIndex < 26) ? startIndex++ : startIndex = 0;
             Arrays.fill(shadowMatrix[i], ' ');
         }
     }
