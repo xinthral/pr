@@ -21,6 +21,19 @@ def ratioGenerator(index, nRatio, debug=0):
         yield(a if (debug == 0) else (i,a))
         a, b = b, (nRatio * b + a)
 
+def memoFib(index, memo={}):
+    '''
+    Returns the Nth Fibonacci number in the Sequence
+    utilizing memoization 
+    index   := The number of iterations before returning a number
+    memo    := A dictionary utilized for eliminating duplicate computations
+            that often slow down recursive functions.
+    '''
+    if (index in memo.keys()): return(memo[index])
+    if (index <= 2): return(1)
+    memo[index] = memoFib(index - 1, memo) + memoFib(index - 2, memo)
+    return(memo[index])
+
 if __name__ == '__main__':
     # First 10 elements of the Fibonacci Sequence
     # And yes, I do start the sequence with 0,1
