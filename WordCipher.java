@@ -12,9 +12,9 @@ public class WordCipher {
     // CLASS SCOPE VARIABLES
     public static final char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    public char[][] outputMatrix = new char[26][26];
-    public char[][] shadowMatrix = new char[26][26];
-    public char[] keyArray;
+    private char[][] outputMatrix = new char[26][26];
+    private char[][] shadowMatrix = new char[26][26];
+    private char[] keyArray;
 
     // CLASS METHODS
     private int getIndex(char letter){
@@ -44,12 +44,12 @@ public class WordCipher {
             System.arraycopy(letters, startIndex, shiftedChars,0, letters.length - startIndex);
             System.arraycopy(letters, 0, shiftedChars, (letters.length - startIndex), letters.length - (letters.length - startIndex));
             outputMatrix[i] = shiftedChars;
-            (startIndex < 26) ? startIndex++ : startIndex = 0;
+            startIndex = startIndex < 26 ? startIndex+1 : 0;
             Arrays.fill(shadowMatrix[i], ' ');
         }
     }
 
-    String encode(String inputText){
+    private String encode(String inputText){
         /**
          * Takes in a string to be encoded with the ciphered matrix
          * @param inputText: Given string you wish to be encoded.
@@ -69,17 +69,13 @@ public class WordCipher {
             } else {
                 outputString += " ";
             }
-            if (keyIndex < keyArray.length-1) {
-                keyIndex++;
-            } else {
-                keyIndex = 0;
-            }
+            keyIndex = (keyIndex < keyArray.length-1) ? keyIndex+1 : 0;
         }
 
         return outputString;
     }
 
-    String decode(String inputText){
+    private String decode(String inputText){
         /**
          * Takes in a string to be decoded with the ciphered matrix
          * @param inputText: Given string you wish to be decoded.
@@ -100,11 +96,7 @@ public class WordCipher {
             } else {
                 outputString += " ";
             }
-            if (keyIndex < keyArray.length-1) {
-                keyIndex++;
-            } else {
-                keyIndex = 0;
-            }
+            keyIndex = (keyIndex < keyArray.length-1) ? keyIndex+1 : 0;
         }
         return outputString;
     }
@@ -158,13 +150,13 @@ public class WordCipher {
 	    //System.out.print(outputMatrix[V][>]);
         char code = 'H';
         String key = "BABBAGE";
-        boolean hidden = false;
+        boolean hideMatrix = true;
         WordCipher self = new WordCipher(code, key);
 
         assert "PHXXF MQYBPKNJ".equals( self.encode( "HAPPY BIRTHDAY" ) );
         assert "HAPPY BIRTHDAY".equals( self.decode( "PHXXF MQYBPKNJ" ) );
 
         // Optional Method for viewing the cipher matrix based on last item decoded
-        self.displayMatrix(hidden);
+        self.displayMatrix(hideMatrix);
     }
 }
