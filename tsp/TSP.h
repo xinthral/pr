@@ -4,8 +4,7 @@
 // Also has function prototypes for the functions your should implement.
 
 // Node of a linked list that stores (x, y) location of points.
-typedef struct node
-{
+typedef struct node {
    double x;            // x-coordinate of this point in the tour
    double y;            // y-coordinate of this point in the tour
    struct node* next;   // Pointer to the next node in the linked list
