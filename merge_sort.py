@@ -5,7 +5,7 @@ def merge_sort(list_to_sort):
 
   # Step 1: divide the list in half
   # We use integer division, so we'll never get a "half index"
-  mid_index = len(list_to_sort) / 2
+  mid_index = int(len(list_to_sort) / 2)
   left  = list_to_sort[:mid_index]
   right = list_to_sort[mid_index:]
 
@@ -31,3 +31,8 @@ def merge_sort(list_to_sort):
           sorted_list.append(sorted_right[current_index_right])
           current_index_right += 1
   return(sorted_list)
+
+
+if __name__ == '__main__':
+    lst = [int(x) for x in str(3498234782498285254682482345982896349826527)]
+    print(merge_sort(lst))
