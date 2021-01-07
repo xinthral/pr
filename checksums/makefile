@@ -12,7 +12,7 @@ CFLAGS = -g -std=c99 -pedantic -Wall -Wextra -O1
 # Flags used in linking, e.g. -lm if you need the math library
 LDFLAGS =
 # Target excutable name
-EXEC = an_emul
+EXEC = chksum.exe 
 # All the object files that are need to build the executable
 OBJECTS = Crypto.o Key.o Checksum.o
 COMPILD = Crypto Key Checksum
