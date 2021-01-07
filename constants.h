@@ -1,5 +1,5 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#ifndef __CONSTANTS_H__
+#define __CONSTANTS_H__
 /* This file is primarily used as global constants that
 I frequently use */
 
