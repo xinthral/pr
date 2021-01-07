@@ -6,6 +6,7 @@ __pycache__/
 
 # Internal
 *.config
+*.dev
 
 # Prerequisites
 *.d
