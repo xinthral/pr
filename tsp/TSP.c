@@ -1,3 +1,5 @@
+// TODO: I break this and will fix it at some point 1/7/2021
+
 /**
 * User: Xinthral
 * Date: 4/17/2019
@@ -6,8 +8,8 @@
 * Visit all nodes in shortest path
 */
 
-#include "traveling_salesman.h"	// Gets the Node data type and the function prototypes
-#include <stdlib.h>  			// Needed to get the NULL constant
+#include "TSP.h"		// Gets the Node data type and the function prototypes
+#include <stdlib.h>  	// Needed to get the NULL constant
 #include <stdio.h>
 #include <float.h>
 /*
